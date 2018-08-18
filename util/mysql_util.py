@@ -18,8 +18,3 @@ def getCom(str):
     i = str.index("('")
     j = str.index(",")
     return str[i + 2:j - 1]
-
-
-if __name__ == '__main__':
-    # get_columns("localhost", "root", "123456","vip", 'record')
-    print("#######".replace("#","r"))

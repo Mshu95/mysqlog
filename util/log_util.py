@@ -33,6 +33,7 @@ def read_txt(ws, config):
                 row += 1
     print("ok,你现在可以到/result/文件夹下找到结果了🌈")
 
+
 def formart_time(element):
     str_time = element.replace("\n", "")[1:16]
     index = str_time.index(" ")
@@ -106,13 +107,14 @@ def write_excel(ws, row, list):
             .replace(");", ";")
     if (list[1] == "UPDATE"):
         sql = "UPDATE `" + list[ll - 3] + "`.`" + list[ll - 2] + "` SET "
-        sql = for_fun(l, sql, 3, " , ", "", list)
+        sql = for_fun(l, sql, l + 4, " , ", "", list)
         sql = sql + " WHERE "
-        sql = for_fun(l, sql, l + 4, " AND ", ";", list)
+        sql = for_fun(l, sql, 3, " AND ", ";", list)
         back_sql = "UPDATE `" + list[ll - 3] + "`.`" + list[ll - 2] + "` SET "
-        back_sql = for_fun(l, back_sql, l + 4, " , ", "", list)
+        back_sql = for_fun(l, back_sql, 3, " , ", "", list)
         back_sql = back_sql + " WHERE "
-        back_sql = for_fun(l, back_sql, 3, " AND ", ";", list)
+        back_sql = for_fun(l, back_sql, l + 4, " AND ", ";", list)
+
 
         fill = sty.PatternFill(fill_type='solid', fgColor="f28500")
     ws.cell(row=row, column=1, value='%s' % list[0])
@@ -147,7 +149,3 @@ def startlog(config):
         write(read_txt, name, config)
     print("")
     print("拍拍手上的灰--完事了！🦄")
-
-
-if __name__ == '__main__':
-    write(read_txt, "C:\\Users\\mshu\\Desktop\\log.xlsx")
