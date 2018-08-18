@@ -1,0 +1,271 @@
+/*!50530 SET @@SESSION.PSEUDO_SLAVE_MODE=1*/;
+/*!50003 SET @OLD_COMPLETION_TYPE=@@COMPLETION_TYPE,COMPLETION_TYPE=0*/;
+DELIMITER /*!*/;
+# at 4
+#180817  8:35:34 server id 1  end_log_pos 123 CRC32 0xd8ac56f6 	Start: binlog v 4, server v 5.7.20-log created 180817  8:35:34 at startup
+# Warning: this binlog is either in use or was not closed properly.
+ROLLBACK/*!*/;
+# at 123
+#180817  8:35:35 server id 1  end_log_pos 154 CRC32 0x4a6f4543 	Previous-GTIDs
+# [empty]
+# at 154
+#180818 13:22:13 server id 1  end_log_pos 219 CRC32 0x95856cab 	Anonymous_GTID	last_committed=0	sequence_number=1	rbr_only=yes
+/*!50718 SET TRANSACTION ISOLATION LEVEL READ COMMITTED*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 219
+#180818 13:22:13 server id 1  end_log_pos 290 CRC32 0xccdda952 	Query	thread_id=123	exec_time=0	error_code=0
+SET TIMESTAMP=1534569733/*!*/;
+SET @@session.pseudo_thread_id=123/*!*/;
+SET @@session.foreign_key_checks=1, @@session.sql_auto_is_null=0, @@session.unique_checks=1, @@session.autocommit=1/*!*/;
+SET @@session.sql_mode=1344274432/*!*/;
+SET @@session.auto_increment_increment=1, @@session.auto_increment_offset=1/*!*/;
+/*!\C utf8 *//*!*/;
+SET @@session.character_set_client=33,@@session.collation_connection=33,@@session.collation_server=33/*!*/;
+SET @@session.lc_time_names=0/*!*/;
+SET @@session.collation_database=DEFAULT/*!*/;
+BEGIN
+/*!*/;
+# at 290
+#180818 13:22:13 server id 1  end_log_pos 361 CRC32 0x5a68c3f5 	Table_map: `vip`.`sys_user` mapped to number 283
+# at 361
+#180818 13:22:13 server id 1  end_log_pos 465 CRC32 0x9fe0f2c4 	Delete_rows: table id 283 flags: STMT_END_F
+### DELETE FROM `vip`.`sys_user`
+### WHERE
+###   @1=0
+###   @2='123456'
+###   @3='mshu'
+###   @4='123456'
+###   @5=1
+###   @6=1
+###   @7=1855079819
+###   @8='2018-04-30 11:41:03'
+###   @9='无不良记录'
+###   @10=100
+###   @11=100
+# at 465
+#180818 13:22:13 server id 1  end_log_pos 496 CRC32 0xcad022f3 	Xid = 347
+COMMIT/*!*/;
+# at 496
+#180818 13:52:53 server id 1  end_log_pos 561 CRC32 0x7debbe81 	Anonymous_GTID	last_committed=1	sequence_number=2	rbr_only=yes
+/*!50718 SET TRANSACTION ISOLATION LEVEL READ COMMITTED*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 561
+#180818 13:52:53 server id 1  end_log_pos 632 CRC32 0x0c7d25e9 	Query	thread_id=123	exec_time=0	error_code=0
+SET TIMESTAMP=1534571573/*!*/;
+BEGIN
+/*!*/;
+# at 632
+#180818 13:52:53 server id 1  end_log_pos 691 CRC32 0x1dfdb383 	Table_map: `vip`.`record` mapped to number 282
+# at 691
+#180818 13:52:53 server id 1  end_log_pos 731 CRC32 0x58f17302 	Write_rows: table id 282 flags: STMT_END_F
+### INSERT INTO `vip`.`record`
+### SET
+###   @1=5
+###   @2=NULL
+###   @3=NULL
+###   @4=NULL
+###   @5=NULL
+###   @6=NULL
+###   @7=NULL
+# at 731
+#180818 13:52:53 server id 1  end_log_pos 762 CRC32 0x7171b8bc 	Xid = 594
+COMMIT/*!*/;
+# at 762
+#180818 13:58:00 server id 1  end_log_pos 827 CRC32 0x677fc701 	Anonymous_GTID	last_committed=2	sequence_number=3	rbr_only=yes
+/*!50718 SET TRANSACTION ISOLATION LEVEL READ COMMITTED*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 827
+#180818 13:58:00 server id 1  end_log_pos 898 CRC32 0xf4bab4cc 	Query	thread_id=123	exec_time=0	error_code=0
+SET TIMESTAMP=1534571880/*!*/;
+BEGIN
+/*!*/;
+# at 898
+#180818 13:58:00 server id 1  end_log_pos 957 CRC32 0x4cbb9bda 	Table_map: `vip`.`record` mapped to number 282
+# at 957
+#180818 13:58:00 server id 1  end_log_pos 1072 CRC32 0xa9775ce0 	Update_rows: table id 282 flags: STMT_END_F
+### UPDATE `vip`.`record`
+### WHERE
+###   @1=2
+###   @2=2
+###   @3='2018-08-08 13:54:49'
+###   @4=2
+###   @5=2
+###   @6=2
+###   @7='哈哈1'
+### SET
+###   @1=2
+###   @2=2
+###   @3='2018-08-08 13:54:49'
+###   @4=2
+###   @5=2
+###   @6=2
+###   @7='哈哈'
+# at 1072
+#180818 13:58:00 server id 1  end_log_pos 1103 CRC32 0xef2fd362 	Xid = 640
+COMMIT/*!*/;
+# at 1103
+#180818 14:18:48 server id 1  end_log_pos 1168 CRC32 0x34cde3da 	Anonymous_GTID	last_committed=3	sequence_number=4	rbr_only=yes
+/*!50718 SET TRANSACTION ISOLATION LEVEL READ COMMITTED*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 1168
+#180818 14:18:48 server id 1  end_log_pos 1239 CRC32 0x8ec7aa38 	Query	thread_id=123	exec_time=0	error_code=0
+SET TIMESTAMP=1534573128/*!*/;
+BEGIN
+/*!*/;
+# at 1239
+#180818 14:18:48 server id 1  end_log_pos 1298 CRC32 0xa456abf8 	Table_map: `vip`.`record` mapped to number 282
+# at 1298
+#180818 14:18:48 server id 1  end_log_pos 1372 CRC32 0xff8f83eb 	Delete_rows: table id 282 flags: STMT_END_F
+### DELETE FROM `vip`.`record`
+### WHERE
+###   @1=2
+###   @2=2
+###   @3='2018-08-08 13:54:49'
+###   @4=2
+###   @5=2
+###   @6=2
+###   @7='哈哈'
+# at 1372
+#180818 14:18:48 server id 1  end_log_pos 1403 CRC32 0xcf1085e7 	Xid = 955
+COMMIT/*!*/;
+# at 1403
+#180818 14:19:00 server id 1  end_log_pos 1468 CRC32 0xb2fbdc32 	Anonymous_GTID	last_committed=4	sequence_number=5	rbr_only=yes
+/*!50718 SET TRANSACTION ISOLATION LEVEL READ COMMITTED*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 1468
+#180818 14:19:00 server id 1  end_log_pos 1539 CRC32 0x849a85aa 	Query	thread_id=123	exec_time=0	error_code=0
+SET TIMESTAMP=1534573140/*!*/;
+BEGIN
+/*!*/;
+# at 1539
+#180818 14:19:00 server id 1  end_log_pos 1598 CRC32 0x8f578a08 	Table_map: `vip`.`record` mapped to number 282
+# at 1598
+#180818 14:19:00 server id 1  end_log_pos 1638 CRC32 0x3c86b7d1 	Write_rows: table id 282 flags: STMT_END_F
+### INSERT INTO `vip`.`record`
+### SET
+###   @1=6
+###   @2=NULL
+###   @3=NULL
+###   @4=NULL
+###   @5=NULL
+###   @6=NULL
+###   @7=NULL
+# at 1638
+#180818 14:19:00 server id 1  end_log_pos 1669 CRC32 0x9ef57c2f 	Xid = 962
+COMMIT/*!*/;
+# at 1669
+#180818 16:28:05 server id 1  end_log_pos 1734 CRC32 0xf65f7df7 	Anonymous_GTID	last_committed=5	sequence_number=6	rbr_only=yes
+/*!50718 SET TRANSACTION ISOLATION LEVEL READ COMMITTED*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 1734
+#180818 16:28:05 server id 1  end_log_pos 1805 CRC32 0xcd862f26 	Query	thread_id=6	exec_time=0	error_code=0
+SET TIMESTAMP=1534580885/*!*/;
+BEGIN
+/*!*/;
+# at 1805
+#180818 16:28:05 server id 1  end_log_pos 1876 CRC32 0x652df20f 	Table_map: `vip`.`sys_user` mapped to number 283
+# at 1876
+#180818 16:28:05 server id 1  end_log_pos 2052 CRC32 0xa523fbd5 	Update_rows: table id 283 flags: STMT_END_F
+### UPDATE `vip`.`sys_user`
+### WHERE
+###   @1=7
+###   @2='123456'
+###   @3='mshu'
+###   @4='123456'
+###   @5=1
+###   @6=1
+###   @7=1855079819
+###   @8='2018-04-30 11:41:03'
+###   @9='无不良记录'
+###   @10=100
+###   @11=100
+### SET
+###   @1=7
+###   @2='123456'
+###   @3='神龙'
+###   @4='123456'
+###   @5=1
+###   @6=1
+###   @7=1855079819
+###   @8='2018-04-30 11:41:03'
+###   @9='无不良记录'
+###   @10=100
+###   @11=100
+# at 2052
+#180818 16:28:05 server id 1  end_log_pos 2083 CRC32 0x82f366fa 	Xid = 1609
+COMMIT/*!*/;
+# at 2083
+#180818 16:30:12 server id 1  end_log_pos 2148 CRC32 0x04217957 	Anonymous_GTID	last_committed=6	sequence_number=7	rbr_only=yes
+/*!50718 SET TRANSACTION ISOLATION LEVEL READ COMMITTED*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 2148
+#180818 16:30:12 server id 1  end_log_pos 2219 CRC32 0xe78ccd34 	Query	thread_id=123	exec_time=0	error_code=0
+SET TIMESTAMP=1534581012/*!*/;
+BEGIN
+/*!*/;
+# at 2219
+#180818 16:30:12 server id 1  end_log_pos 2290 CRC32 0x68286f9f 	Table_map: `vip`.`sys_user` mapped to number 283
+# at 2290
+#180818 16:30:12 server id 1  end_log_pos 2466 CRC32 0x512652b9 	Update_rows: table id 283 flags: STMT_END_F
+### UPDATE `vip`.`sys_user`
+### WHERE
+###   @1=7
+###   @2='123456'
+###   @3='神龙'
+###   @4='123456'
+###   @5=1
+###   @6=1
+###   @7=1855079819
+###   @8='2018-04-30 11:41:03'
+###   @9='无不良记录'
+###   @10=100
+###   @11=100
+### SET
+###   @1=7
+###   @2='123456'
+###   @3='mshu'
+###   @4='123456'
+###   @5=1
+###   @6=1
+###   @7=1855079819
+###   @8='2018-04-30 11:41:03'
+###   @9='无不良记录'
+###   @10=100
+###   @11=100
+# at 2466
+#180818 16:30:12 server id 1  end_log_pos 2497 CRC32 0x021e88a4 	Xid = 1634
+COMMIT/*!*/;
+# at 2497
+#180818 16:48:36 server id 1  end_log_pos 2562 CRC32 0xa7784955 	Anonymous_GTID	last_committed=7	sequence_number=8	rbr_only=yes
+/*!50718 SET TRANSACTION ISOLATION LEVEL READ COMMITTED*//*!*/;
+SET @@SESSION.GTID_NEXT= 'ANONYMOUS'/*!*/;
+# at 2562
+#180818 16:48:36 server id 1  end_log_pos 2633 CRC32 0xf3a0da46 	Query	thread_id=123	exec_time=0	error_code=0
+SET TIMESTAMP=1534582116/*!*/;
+BEGIN
+/*!*/;
+# at 2633
+#180818 16:48:36 server id 1  end_log_pos 2704 CRC32 0xaed0a3ed 	Table_map: `vip`.`sys_user` mapped to number 283
+# at 2704
+#180818 16:48:36 server id 1  end_log_pos 2746 CRC32 0x6a352b2f 	Write_rows: table id 283 flags: STMT_END_F
+### INSERT INTO `vip`.`sys_user`
+### SET
+###   @1=0
+###   @2=NULL
+###   @3=NULL
+###   @4=NULL
+###   @5=NULL
+###   @6=NULL
+###   @7=NULL
+###   @8=NULL
+###   @9=NULL
+###   @10=NULL
+###   @11=NULL
+# at 2746
+#180818 16:48:36 server id 1  end_log_pos 2777 CRC32 0x371e1c2a 	Xid = 1687
+COMMIT/*!*/;
+SET @@SESSION.GTID_NEXT= 'AUTOMATIC' /* added by mysqlbinlog */ /*!*/;
+DELIMITER ;
+# End of log file
+/*!50003 SET COMPLETION_TYPE=@OLD_COMPLETION_TYPE*/;
+/*!50530 SET @@SESSION.PSEUDO_SLAVE_MODE=0*/;
