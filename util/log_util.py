@@ -14,7 +14,7 @@ def only_start(only):
 
 
 def read_txt(ws, config):
-    fs = open("util/analyse.txt", encoding="utf-8")
+    fs = open("util/analyse.txt", encoding="utf-8",errors='ignore')
     lines = fs.readlines()
     unit = []
     row = 2

@@ -1,7 +1,7 @@
 from util.log_util import startlog
 
 config = [
-    "localhost",
+    "192.168.1.88",
     "root",
     "123456"
 ]
